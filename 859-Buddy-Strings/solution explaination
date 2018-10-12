@@ -1,0 +1,24 @@
+#思路
+
+A和B两个字符串，如果长度都不相等，直接返回false;
+主要有两种情况，一种是A和B完全相等（aaa VS aaa, abc VS abc）,
+另一种是A和B不完全相等（aaabac VS aaacab, aaabac VS aaadac）
+
+#细节
+
+1、A和B完全相等情况下，如何判断字符串具有两个及两个以上相同的元素？
+字符串的元素范围为26个小写字母，只要某个字母的出现频率大于1即满足。
+关键的一条程序语句是：
+    count[ A[i] - 'a' ]
+
+2、A和B不完全相等情况下，用first和second记录两个不同的位置
+关键的程序语句：
+    first, second := -1, -1
+    for ...
+        if first != -1 {
+            ...
+        }else if second != -1 {
+            ...
+        }else {
+            return false
+        }
