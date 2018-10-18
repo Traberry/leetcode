@@ -40,7 +40,7 @@ func buddyStrings(A string, B string) bool {
 }
 
 func main() {
-	A := "aaaaaaabc"
-	B := "aaaaaaacb"
+	A := "ab"
+	B := "ba"
 	fmt.Println(buddyStrings(A, B))
 }
