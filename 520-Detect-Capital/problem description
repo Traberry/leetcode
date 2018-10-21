@@ -1,0 +1,9 @@
+Given a word, you need to judge whether the usage of capitals in it is right or not.
+
+Example 1:
+Input: "USA"
+Output: True
+
+Example 2:
+Input: "FlaG"
+Output: False
