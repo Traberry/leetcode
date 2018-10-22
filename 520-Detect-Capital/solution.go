@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//seem too complex
 func detectCapitalUse(word string) bool {
 	countU, countL := 0, 0
 	for i := 0; i < len(word); i++ {
@@ -30,4 +31,15 @@ func detectCapitalUse(word string) bool {
 func main() {
 	s := "AbcdE"
 	fmt.Println(detectCapitalUse(s))
+}
+
+//simplified way, only use one count, no too much if...else...
+func detectCapitalUse2(word string) bool {
+	countU := 0
+	for i := 0; i < len(word); i++ {
+		if word[i] <97 {
+			countU++
+		}
+	}
+	return countU == 0 || (countU == 1 && word[0] < 97) || countU == len(word)
 }
