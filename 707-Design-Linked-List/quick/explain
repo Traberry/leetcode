@@ -1,0 +1,20 @@
+#思路
+
+quickSolution里的解法是把数组切片封装成单链表。
+因为老老实实用go语言写出来的单链表竟然不能通过所有测试集！
+我很奇怪的是，如果是效率问题，go的效率还比不过python吗?
+
+
+#细节
+
+往int slice中间插入一个元素的方法
+func (this *MyLinkedList) AddAtIndex(index int, val int)  {
+	if index < 0 || index >= len(this.List) {
+		return
+	}
+
+	this.List = append(this.List, 0)
+	copy(this.List[index + 1:], this.List[index:])
+
+	this.List[index] = val
+}
