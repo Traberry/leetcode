@@ -18,10 +18,10 @@ func (q *Queue) Pop() int {
 	return p
 }
 
-func (q *Queue) length() int {
+func (q *Queue) Length() int {
 	return len(q.nums)
 }
 
 func (q *Queue) IsEmpty() bool {
-	return q.length() == 0
+	return q.Length() == 0
 }
