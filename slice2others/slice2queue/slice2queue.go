@@ -13,7 +13,9 @@ func (q *Queue) Push(v int) {
 }
 
 func (q *Queue) Pop() int {
-	return q.nums[0]
+	p := q.nums[0]
+	q.nums = q.nums[1:]
+	return p
 }
 
 func (q *Queue) length() int {
